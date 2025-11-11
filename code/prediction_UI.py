@@ -2,16 +2,18 @@
 import streamlit as st
 import joblib
 import pandas as pd
-from io import StringIO
+from io import StringIO, BytesIO
 import requests
 
 # --------------------------
 # Load models
 # --------------------------
-rf = joblib.load("models/rf_matchup_model.pkl")
-xgb = joblib.load("models/xgb_matchup_model.pkl")
+url_rf = "https://github.com/jake-lukasik/Capstone-Prediction-App/raw/refs/heads/main/models/rf_matchup_model.pkl"
+url_xgb = "https://github.com/jake-lukasik/Capstone-Prediction-App/raw/refs/heads/main/models/xgb_matchup_model.pkl"
 
-
+# Load models directly from GitHub
+rf = joblib.load(BytesIO(requests.get(url_rf).content))
+xgb = joblib.load(BytesIO(requests.get(url_xgb).content))
 # --------------------------
 # Load future games
 # --------------------------
