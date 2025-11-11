@@ -8,8 +8,8 @@ import requests
 # --------------------------
 # Load models
 # --------------------------
-rf = joblib.load("../models/rf_matchup_model.pkl")
-xgb = joblib.load("../models/xgb_matchup_model.pkl")
+rf = joblib.load("https://github.com/jake-lukasik/Capstone-Prediction-App/raw/refs/heads/main/models/rf_matchup_model.pkl")
+xgb = joblib.load("https://github.com/jake-lukasik/Capstone-Prediction-App/raw/refs/heads/main/models/xgb_matchup_model.pkl")
 
 
 # --------------------------
