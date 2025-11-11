@@ -16,7 +16,7 @@ xgb = joblib.load("../models/xgb_matchup_model.pkl")
 # Load future games
 # --------------------------
 tbd_games = pd.read_csv(
-    "https://raw.githubusercontent.com/jake-lukasik/Capstone-Prediction-App/refs/heads/main/datasets/datasets/all-possible-matchups.csv"
+    "https://raw.githubusercontent.com/jake-lukasik/Capstone-Prediction-App/refs/heads/main/datasets/all-possible-matchups.csv"
 )
 
 
